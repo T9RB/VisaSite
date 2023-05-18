@@ -1,0 +1,322 @@
+body {
+    background-color: #FFFFFF;
+    color: #333333;
+    font-size: 16px;
+    margin: 0;
+    padding: 100px;
+    font-family: Arial, sans-serif;
+}
+h1 {
+    text-align: left;
+    font-size: 36px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 20px;
+    background-color: #1E2D57;
+    color: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+nav div a {
+    height: 10px;
+    margin: 0px 0px 0px 14px;
+    font-size: 25px;
+    text-decoration: none;
+    color: whitesmoke;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+nav div a:hover {
+    color: lightseagreen;
+}
+
+nav button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: #EC4E20;
+    color: #FFFFFF;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+nav button:hover {
+    background-color: #FFFFFF;
+    color: #EC4E20;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+#auth_window {
+    display: none;
+    animation-duration: 1.5s;
+    animation-fill-mode: both;
+    animation-name: fadeIn;
+}
+
+#auth_window.open {
+    display: block;
+}
+
+.popup {
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(17, 17, 17, 0.5);
+    color: black;
+    transition: all 0.5s ease;
+    display: none;
+}
+
+.popup_open {
+    display: block;
+}
+
+.popup__container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    border-radius: 10px;
+    max-width: 420px;
+    width: 80%;
+}
+
+.popup__wrapper {
+    padding: 40px;
+}
+.popup_escape {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    fill: #444;
+    cursor: pointer;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+hr {
+    border: 1px solid #1E2D57;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.form-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+.form-container form {
+    width: calc(50% - 10px);
+    padding: 20px;
+    border: 1px solid #1E2D57;
+    border-radius: 0;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+.form-container form:first-of-type {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.form-container form:last-of-type {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+h2 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #1E2D57;
+    font-size: 24px;
+}
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select,
+textarea {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #1E2D57;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    0px 2px 4px rgba(0, 0, 0, 0.25);
+}
+input[type="submit"] {
+    display: block;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #EC4E20;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+input[type="submit"]:hover {
+    background-color: #FFFFFF;
+    color: #EC4E20;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+.btn-success {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    position: absolute;
+    top: 205px;
+    right: 165px;
+    background-color: #EC4E20;
+    color: #FFFFFF;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.btn-success:hover{
+    background-color: #FFFFFF;
+    color: #EC4E20;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+footer {
+    background-color: #1E2D57;
+    color: #FFFFFF;
+    padding: 50px 20px;
+    text-align: center;
+    font-size: 16px;
+    box-shadow: 0 -4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.slider{
+    position: relative;
+    z-index: 1;
+}
+
+/*Дизайн стрелок*/
+.arrow-1 {
+    position: absolute;
+    top: 27px;
+    right: 405px;
+}
+.arrow-1 svg {
+    width: 100px;
+    height: 100px;
+    margin: 0 2rem;
+    cursor: pointer;
+    overflow: visible;
+}
+.arrow-1 svg polygon,
+.arrow-1 svg path {
+    transition: all 0.5s cubic-bezier(0.2, 1, 0.3, 1);
+    fill: #FFC000;
+}
+.arrow-1 svg:hover polygon,
+.arrow-1 svg:hover path {
+    transition: all 1s cubic-bezier(0.2, 1, 0.3, 1);
+    fill: #000;
+}
+.arrow-1 svg:hover .arrow-6-pl {
+    animation: arrow-6-anim 1s cubic-bezier(0.2, 1, 0.3, 1) infinite;
+}
+.arrow-1 svg:hover .arrow-6-pl-fixed {
+    animation: arrow-6-fixed-anim 1s cubic-bezier(0.2, 1, 0.3, 1) infinite;
+}
+
+@keyframes arrow-1-anim {
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    5% {
+        transform: translateX(-0.1rem);
+    }
+    100% {
+        transform: translateX(1rem);
+        opacity: 0;
+    }
+}
+@keyframes arrow-1-fixed-anim {
+    5% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 0.4;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.arrow-2 {
+    position: absolute;
+    top: 32px;
+    left: 450px;
+}
+.arrow-2 svg {
+    width: 100px;
+    height: auto;
+    margin: 0 2rem;
+    cursor: pointer;
+    overflow: visible;
+}
+.arrow-2 svg polygon,
+.arrow-2 svg path {
+    transition: all 0.5s cubic-bezier(0.2, 1, 0.3, 1);
+    fill: #FFC000;
+}
+.arrow-2 svg:hover polygon,
+.arrow-2 svg:hover path {
+    transition: all 1s cubic-bezier(0.2, 1, 0.3, 1);
+    fill: #000;
+}
+.arrow-2 svg:hover .arrow-6-pl {
+    animation: arrow-6-anim 1s cubic-bezier(0.2, 1, 0.3, 1) infinite;
+}
+.arrow-2 svg:hover .arrow-6-pl-fixed {
+    animation: arrow-6-fixed-anim 1s cubic-bezier(0.2, 1, 0.3, 1) infinite;
+}
+
+@keyframes arrow-2-anim {
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    5% {
+        transform: translateX(-0.1rem);
+    }
+    100% {
+        transform: translateX(1rem);
+        opacity: 0;
+    }
+}
+@keyframes arrow-2-fixed-anim {
+    5% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 0.4;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+/*--------------------Дизайн стрелок*/
