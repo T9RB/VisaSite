@@ -5,6 +5,7 @@ body {
     margin: 0;
     padding: 100px;
     font-family: Arial, sans-serif;
+    zoom: 60%;
 }
 h1 {
     text-align: left;
@@ -215,7 +216,7 @@ footer {
 .arrow-1 {
     position: absolute;
     top: 27px;
-    right: 405px;
+    right: 525px;
 }
 .arrow-1 svg {
     width: 100px;
@@ -269,7 +270,7 @@ footer {
 .arrow-2 {
     position: absolute;
     top: 32px;
-    left: 450px;
+    left: 570px;
 }
 .arrow-2 svg {
     width: 100px;
