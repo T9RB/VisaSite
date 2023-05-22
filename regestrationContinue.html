@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Продолжение регистрации</title>
+    <link rel="stylesheet" href="css/style_register_cont.css">
+</head>
+<body>
+<h1>
+    <span style="color: #1E2D57;">Паспортно</span>
+    <span style="color: black">-</span>
+    <span style="color: #EC4E20;">визовая служба</span>
+</h1>
+<nav>
+
+</nav>
+<form method="post">
+    <div class="container">
+        <h1>Продолжение регистрация</h1>
+        <p>Пожалуйста заполните дополнительную форму, чтобы создать аккаунт.</p>
+        <hr>
+
+        <label><b>Фамилия</b></label>
+        <input type="text" placeholder="Введите вашу фамилию" name="surname" id="surnameReg" required minlength="2" maxlength="20">
+
+        <label><b>Имя</b></label>
+        <input type="text" placeholder="Введите ваше имя" name="nameClient" id="nameClientReg" required minlength="2" maxlength="20">
+
+        <label><b>Отчество</b></label>
+        <input type="text" placeholder="Введите ваше отчество (если есть)" name="middleNameClient" id="middleNameClientReg" required minlength="0" maxlength="20">
+
+        <label><b>Место рождения</b></label>
+        <input type="text" placeholder="Введите место рождения" name="placeOfBirthClient" id="placeOfBirthReg" required minlength="5" maxlength="30">
+
+        <label><b>Национальность</b></label>
+        <input type="text" placeholder="Введите вашу национальность" name="nationallyClient" id="nationallyReg" required minlength="5" maxlength="30">
+
+        <label><b>Дата рождения</b></label>
+        <input type="text" placeholder="Введите дату рождения" name="birthdayClient" id="birthdayReg" required pattern="\d{4}/\d{1,2}/\d{1,2}">
+
+        <label><b>Семейный статус</b></label>
+        <input type="text" placeholder="Введите ваш семейный статус" name="familyStatusClient" id="FamilyStatusReg" required pattern="в браке/не в браке">
+
+        <label><b>Паспортные данные</b></label>
+        <input type="text" placeholder="Введите серию паспорта" name="passportSeriesClient" id="passportSeriesReg" required minlength="4" maxlength="4" pattern="^([0-9]){4}$">
+        <input type="text" placeholder="Введите номер паспорта" name="passportNumberClient" id="passportNumberReg" required minlength="6" maxlength="6" pattern="^([0-9]){6}$">
+
+        <label><b>Прописка</b></label>
+        <input type="text" placeholder="Введите город" name="cityClient" id="cityReg" required minlength="2" maxlength="30">
+        <input type="text" placeholder="Введите улицу" name="streetClient" id="streetReg" required minlength="2" maxlength="30">
+        <input type="text" placeholder="Введите номер дома" name="houseClient" id="houseReg" required minlength="1" maxlength="3">
+        <input type="text" placeholder="Введите номер квартиры" name="flatClient" id="flatReg" required minlength="1" maxlength="3">
+
+
+        <label><b>Гражданство</b></label>
+        <input type="text" placeholder="Введите гражданство" name="citizenshipClient" id="citizenshipReg" required minlength="5" maxlength="30">
+
+        <hr>
+        <p>Создавая учетную запись, вы соглашаетесь с нашими <a href="privacyPolicyPage.html">условиями и конфиденциальностью</a>.</p>
+        <button type="submit" class="endRegBtn">Завершить</button>
+        <script src="js/endRegisterClient.js"></script>
+    </div>
+
+</form>
+</body>
+</html>

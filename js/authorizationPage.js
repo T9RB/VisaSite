@@ -1,15 +1,6 @@
-const button_open = document.querySelector('button');
-const button_close = document.querySelector('.popup_escape')
-const form = document.querySelector('#auth_window');
-const popup = document.querySelector('.popup');
-const button_success = document.querySelector('.btn-success');
+const button_submit = document.querySelector('.login-submit');
 
-button_open.addEventListener('click', () => {
-    form.classList.add('open');
-    popup.classList.add('popup_open');
-});
-
-button_success.addEventListener('click', () => {
+button_submit.addEventListener('click', () => {
 
     let login = document.getElementById('loginUser').value;
     let password = document.getElementById('passwordUser').value;
@@ -36,9 +27,4 @@ button_success.addEventListener('click', () => {
     }
     request.send(null);
 
-});
-
-button_close.addEventListener('click', () => {
-    form.classList.remove('open');
-    popup.classList.remove('popup_open');
 });

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="css/style_register.css">
+</head>
+<body>
+<h1>
+    <span style="color: #1E2D57;">Паспортно</span>
+    <span style="color: black">-</span>
+    <span style="color: #EC4E20;">визовая служба</span>
+</h1>
+<nav>
+    <div id="alertClass" class="alert">
+    </div>
+</nav>
+    <form>
+        <div class="container">
+            <h1>Регистрация</h1>
+            <p>Пожалуйста заполните форму, чтобы создать аккаунт.</p>
+            <hr>
+
+            <label><b>Логин</b></label>
+            <input type="text" placeholder="Введите логин" name="login" id="loginReg" required>
+
+            <label><b>Пароль</b></label>
+            <input type="password" placeholder="Введите пароль" name="psw" id="pswReg" required minlength="5" maxlength="30">
+
+            <label><b>Повторите пароль</b></label>
+            <input type="password" placeholder="Повторите пароль" id="pswRep" name="psw-repeat" class="psw-repeat" required minlength="5" maxlength="30">
+
+            <hr>
+
+            <p>Создавая учетную запись, вы соглашаетесь с нашими <a href="privacyPolicyPage.html">условиями и конфиденциальностью</a>.</p>
+            <button type="submit" class="registerBtn">Регистрация</button>
+        </div>
+        <div class="container signIn">
+            <p>Вы уже имеете аккаунт? <a href="authorizationPage.html">Войти</a>.</p>
+        </div>
+    </form>
+    <script src="js/registrAccount.js"></script>
+</body>
+</html>
