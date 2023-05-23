@@ -19,9 +19,6 @@ button_reg_end.addEventListener('submit', (e) => {
 
     // document.getElementById('alertClass').visibility = 'hidden';
 
-   /* if (surname !== '' && name !== '' && middleName !== '' && placeBirth !== '' && nationally !== '' && birthday !== ''
-        && familyStatus !== '' && passportSeries !== '' && passportNumber !== '' && registrationCity !== ''
-        && registrationStreet !== '' && registrationHouse !== '' && registrationFlat !== '' && citizenship !== ''){*/
         try{
             let url = `http://localhost:5004/api/v1/visa/new-client`;
             let request = new XMLHttpRequest();
@@ -59,7 +56,6 @@ button_reg_end.addEventListener('submit', (e) => {
             /*ShowMessage("Логин уже существует!");*/
         }
 
-    // }
    /* else {
         if (surname === '' && name === '' && middleName === '' && placeBirth === '' && nationally === '' && birthday === ''
             && familyStatus === '' && passportSeries === '' && passportNumber === '' && registrationCity === ''

@@ -1,7 +1,7 @@
-const button_submit = document.querySelector('.login-submit');
+const button_submit = document.querySelector('form');
 
-button_submit.addEventListener('click', () => {
-
+button_submit.addEventListener('submit', (e) => {
+    e.preventDefault();
     let login = document.getElementById('loginUser').value;
     let password = document.getElementById('passwordUser').value;
 
@@ -15,7 +15,7 @@ button_submit.addEventListener('click', () => {
         if (request.status === 200){
             let resoponseObject = JSON.parse(request.response);
             if (resoponseObject.access === true){
-                location.href = "html/personalAccount.html";
+                location.href = "../personalAccount.html";
             }
             else {
                 alert('Неверный логин или пароль');

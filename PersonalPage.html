@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Личный кабинет</title>
+    <link rel="stylesheet" href="css/style_personal_account_page.css">
+</head>
+<body>
+<h1>
+    <span style="color: #1E2D57;">Паспортно</span>
+    <span style="color: black">-</span>
+    <span style="color: #EC4E20;">визовая служба</span>
+</h1>
+<nav>
+    <div>
+        <span id="spanHead" style="color: #6C8AD5">Личный кабинет</span>
+    </div>
+</nav>
+
+<nav id="funcList">
+    <button id="loadDataClient">Ваши данные</button>
+    <button id="createDocuments">Оформление документов</button>
+    <button id="myDocuments">Мои документы</button>
+    <button id="myRequests">Мои заявки</button>
+    <button id="payment">Оплата</button>
+</nav>
+
+<div class="container">
+
+    <div class="buttonClass">
+        <button id="updateClientData">Изменить данные</button>
+    </div>
+    <label><b>Фамилия</b></label>
+    <input placeholder="Введите вашу фамилию" name="surname" id="surnameReg" readonly>
+
+    <label><b>Имя</b></label>
+    <input type="text" placeholder="Введите ваше имя" name="nameClient" id="nameClientReg" readonly>
+
+    <label><b>Отчество</b></label>
+    <input type="text" placeholder="Введите ваше отчество (если есть)" name="middleNameClient" id="middleNameClientReg" readonly>
+
+    <label><b>Место рождения</b></label>
+    <input type="text" placeholder="Введите место рождения" name="placeOfBirthClient" id="placeOfBirthReg" readonly>
+
+    <label><b>Национальность</b></label>
+    <input type="text" placeholder="Введите вашу национальность" name="nationallyClient" id="nationallyReg" rreadonly>
+
+    <label><b>Дата рождения</b></label>
+    <input type="text" placeholder="Введите дату рождения" name="birthdayClient" id="birthdayReg" readonly>
+
+    <label><b>Семейный статус</b></label>
+    <input type="text" placeholder="Введите ваш семейный статус" name="familyStatusClient" id="FamilyStatusReg" readonly>
+
+    <label><b>Паспортные данные</b></label>
+    <input type="text" placeholder="Введите серию паспорта" name="passportSeriesClient" id="passportSeriesReg" readonly>
+    <input type="text" placeholder="Введите номер паспорта" name="passportNumberClient" id="passportNumberReg" readonly>
+
+    <label><b>Прописка</b></label>
+    <input type="text" placeholder="Введите город" name="cityClient" id="cityReg" readonly>
+    <input type="text" placeholder="Введите улицу" name="streetClient" id="streetReg" readonly>
+    <input type="text" placeholder="Введите номер дома" name="houseClient" id="houseReg" readonly>
+    <input type="text" placeholder="Введите номер квартиры" name="flatClient" id="flatReg" readonly>
+
+    <label><b>Гражданство</b></label>
+    <input type="text" placeholder="Введите гражданство" name="citizenshipClient" id="citizenshipReg" readonly>
+    <label></label>
+    <script src=""></script>
+</div>
+    <!--<label for="passportData">Паспортные данные:</label>
+    <input id="passportData" type="text" placeholder="">
+    <label for="registration">Прописка:</label>
+    <input id="registration" type="text" placeholder="">
+
+
+</body>
+</html>

@@ -26,7 +26,7 @@ button_success.addEventListener('click', () => {
             if (resoponseObject.access === true){
                 let userID = toString(resoponseObject.accountID);
                 sessionStorage.setItem('userID', `${userID}`);
-                location.href = "html/personalAccount.html";
+                location.href = "../personalAccount.html";
             }
             else {
                 alert('Неверный логин или пароль')

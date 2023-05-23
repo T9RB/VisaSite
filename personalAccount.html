@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Личный кабинет - Паспортно-визовая служба</title>
+    <link rel="stylesheet" href="css/style_personal_page.css">
+</head>
+<body>
+<h1>
+    <span style="color: #1E2D57;">Паспортно</span>
+    <span style="color: black">-</span>
+    <span style="color: #EC4E20;">визовая служба</span>
+</h1>
+<nav>
+    <div>
+        <span style="color: #6C8AD5">Личный кабинет</span>
+    </div>
+</nav>
+<div class="container">
+    <nav>
+        <a href="index.html">Главная</a>
+        <a href="#">Личный кабинет</a>
+        <a href="#">О нас</a>
+        <a href="#">Контакты</a>
+    </nav>
+
+    <section>
+        <h2>Добро пожаловать в личный кабинет</h2>
+        <p>Здесь вы можете:</p>
+        <ul>
+            <li>Оставить заявку на оформление паспорта</li>
+            <li>Оставить заявку на получение визы</li>
+            <li>Оставить заявку на получение разрешения на выезд из страны</li>
+            <li>Просмотреть статус оформления паспорта или визы, или разрешения</li>
+        </ul>
+        <p>Для входа в личный кабинет введите свой логин и пароль:</p>
+        <form>
+            <input type="text" id="loginUser" name="login" class="login-field" placeholder="Логин" required>
+            <input type="password" id="passwordUser" name="password" class="login-field" placeholder="Пароль" required>
+            <button type="submit" class="login-submit">Войти</button>
+
+            <div class="container regAccount">
+                <p>Вы ещё не имеете аккаунта? <a href="authorizationPage.html">Регистрация</a>.</p>
+            </div>
+
+            <script src="js/authorizationPage.js"></script>
+        </form>
+    </section>
+</div>
+
+<footer>
+    <p>© Паспортно-визовая служба, РФ</p>
+</footer>
+</body>
+</html>
