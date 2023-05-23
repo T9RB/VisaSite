@@ -18,11 +18,11 @@ button_submit.addEventListener('click', () => {
                 location.href = "html/personalAccount.html";
             }
             else {
-                alert('Неверный логин или пароль')
+                alert('Неверный логин или пароль');
             }
         }
         else{
-            alert('Поля логин или пароль не заполненны')
+            alert('Поля логин или пароль не заполненны');
         }
     }
     request.send(null);

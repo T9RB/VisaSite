@@ -15,10 +15,12 @@ button_reg.addEventListener('submit',  (e) => {
             request.setRequestHeader("Content-Type", "application/json");
             request.setRequestHeader("x-api-key", "0e4bc10b5e334a2c9a89ede9417df633");
 
-            let data = JSON.stringify({"login" : login, "password": password})
+            let data = JSON.stringify({"login" : login, "password": password});
 
             // request.send(data);
             location.href = "regestrationContinue.html";
+            sessionStorage.setItem();
+
         }catch (err){
             ShowMessage("Логин уже существует!");
         }

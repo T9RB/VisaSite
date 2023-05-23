@@ -24,6 +24,8 @@ button_success.addEventListener('click', () => {
         if (request.status === 200){
             let resoponseObject = JSON.parse(request.response);
             if (resoponseObject.access === true){
+                let userID = toString(resoponseObject.accountID);
+                sessionStorage.setItem('userID', `${userID}`);
                 location.href = "html/personalAccount.html";
             }
             else {
