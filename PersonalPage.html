@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <title>Личный кабинет</title>
@@ -25,9 +25,9 @@
     <button id="payment">Оплата</button>
 </nav>
 
-<div class="container">
+<div class="containerDataClient" id="dataClient">
 
-    <div class="buttonClass">
+    <div class="buttonClass" id="putDataButton">
         <button id="updateClientData">Изменить данные</button>
     </div>
     <label><b>Фамилия</b></label>
@@ -64,12 +64,113 @@
     <label><b>Гражданство</b></label>
     <input type="text" placeholder="Введите гражданство" name="citizenshipClient" id="citizenshipReg" readonly>
     <label></label>
-    <script src=""></script>
 </div>
-    <!--<label for="passportData">Паспортные данные:</label>
-    <input id="passportData" type="text" placeholder="">
-    <label for="registration">Прописка:</label>
-    <input id="registration" type="text" placeholder="">
+<script src="js/PersonalAccountFunctions/ClientDataLoading.js"></script>
+
+<div class="newDocuments" id="newDocumentsID">
+
+    <div class="form-group-title">
+        Выберите категорию:
+    </div>
+
+    <select id="services" required>
+        <option value="" disabled selected>Выберите услугу</option>
+        <option value="appointment">Оформление записи на прием</option>
+        <option value="passport">Оформление заявки на получение загранпаспорта</option>
+        <option value="visa">Оформление визы</option>
+    </select>
+
+    <div class="requestVisa" id="requestVisaID">
+        <form>
+            <label><b>Дата обращения</b></label>
+            <input type="date" id="dateRequest" required min="01.01.2023" maxlength="01.01.2030">
+
+            <label><b>Цели выезда</b></label>
+            <input type="text" id="departureGoals" required>
+
+            <label><b>Дата возвращения</b></label>
+            <input type="date" id="dateReturn" required>
+
+            <label><b>Страна отправления</b></label>
+            <input type="text" id="countryDeparture" required>
+
+            <button type="submit" id="buttonCreateReqVisa">Отправить</button>
+        </form>
+    </div>
+
+    <div class="requestPassport" id="requestPassportID">
+        <form>
+            <button type="submit" id="buttonCreateReqPassport">Отправить заявку</button>
+        </form>
+    </div>
+
+    <div class="requestAppointment" id="requestAppointmentID">
+        <form>
+            <label><b>Дата приема</b></label>
+            <input type="date" id="dateReqAppointment" required min="01.01.2023" maxlength="01.01.2030">
+
+            <label><b>Причина обращения</b></label>
+            <input type="text" id="purposeAdmissionReq" required>
+
+            <button type="submit" id="buttonCreateReqAppointment">Отправить</button>
+        </form>
+    </div>
+
+</div>
+<script src="js/PersonalAccountFunctions/ClientDocumentsCreate.js"></script>
+
+<div class="myDocuments" id="myDocumentsID">
+
+<div class="blocksData">
+    <div class="doc-item">
+        <div class="doc-id">
+            <h3>Паспорт РФ</h3>
+            <hr>
+            <span class="passportData" id="spanPassportData123"></span>
+        </div>
+    </div>
+
+    <div class="doc-item-3" id="doc-3-id">
+        <div class="doc-passport">
+            <h3>Загранпаспорт</h3>
+            <hr>
+            <span class="intPassportData" id="intPassportDataID"></span>
+            <h4>Выдан</h4>
+            <span class="organization" id="organizationID"></span>
+            <h4>Дата выдачи</h4>
+            <span class="dateStart" id="dateStartID"></span>
+            <h4>Дата окончания действия</h4>
+            <span class="dateEnd" id="dateEndID"></span>
+        </div>
+    </div>
+
+    <div class="doc-item-4" id="block-visa-id">
+        <div class="doc-visa">
+            <h3>Виза</h3>
+            <hr>
+            <span class="intVisaData" id="VisaDataID"></span>
+            <h4>Выдана</h4>
+            <span class="organization" id="organizationVisaID"></span>
+            <h4>Дата выдачи</h4>
+            <span class="dateStart" id="dateStartVisaID"></span>
+            <h4>Дата окончания действия</h4>
+            <span class="dateEnd" id="dateEndVisaID"></span>
+        </div>
+    </div>
+</div>
+
+    <div class="textBlocks" id="textBlocksID">
+        <div class="doc-item-2">
+            <div class="doc-reg">
+                <h3>Прописка</h3>
+
+                <h4>Адрес проживания</h4>
+                <span class="registration" id="registrationID"></span>
+            </div>
+        </div>
+    </div>
+    <script src="js/PersonalAccountFunctions/ClientsDocuments.js"></script>
+</div>
 
 
 </body>

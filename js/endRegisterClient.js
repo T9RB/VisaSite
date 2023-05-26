@@ -20,7 +20,8 @@ button_reg_end.addEventListener('submit', (e) => {
     // document.getElementById('alertClass').visibility = 'hidden';
 
         try{
-            let url = `http://localhost:5004/api/v1/visa/new-client`;
+            let accountID = sessionStorage.getItem('userID');
+            let url = `http://localhost:5004/api/v1/visa/new-client/number-user=${accountID}`;
             let request = new XMLHttpRequest();
             request.open('POST', url, true);
             request.setRequestHeader("Content-Type", "application/json");
@@ -50,8 +51,19 @@ button_reg_end.addEventListener('submit', (e) => {
             };
 
             let dataJSON = JSON.stringify(data);
-            /*request.send(dataJSON);*/
-            /*location.href = "html/personalAccount.html";*/
+            request.send(dataJSON);
+
+            request.onload = function (){
+                if (request.status === 200){
+                    let response = JSON.parse(request.response);
+                    sessionStorage.setItem('clientID', `${response}`);
+                    if (sessionStorage.getItem('clientID') !== null){
+                        location.href = "PersonalPage.html";
+                    }
+                }
+            }
+
+
         }catch (err){
             /*ShowMessage("Логин уже существует!");*/
         }

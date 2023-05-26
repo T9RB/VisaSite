@@ -28,7 +28,8 @@ nav div span {
     font-size: 25px;
     text-decoration: none;
 }
-.container {
+.containerDataClient {
+    display: none;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
@@ -97,7 +98,7 @@ nav a:hover {
 }
 
 
-input[type=text], input[type=password], input[readonly]{
+input[type=text], input[type=password], input[readonly], input[type=date]{
     width: 100%;
     padding: 15px;
     margin: 5px 0 22px 0;
@@ -106,7 +107,7 @@ input[type=text], input[type=password], input[readonly]{
     background: #f1f1f1;
 }
 
-input[type=text]:focus, input[type=password], input[readonly]:focus {
+input[type=text]:focus, input[type=password], input[readonly], input[type=date]:focus {
     background-color: #ddd;
     outline: none;
 }
@@ -125,6 +126,285 @@ input[type=text]:focus, input[type=password], input[readonly]:focus {
     cursor: pointer;
     text-decoration: underline;
 }
+
+.newDocuments{
+    display: none;
+}
+
+.newDocuments .requestVisa #buttonCreateReqVisa{
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 200px;
+    opacity: 0.9;
+}
+.newDocuments .requestVisa #buttonCreateReqVisa:hover{
+    background-color: #FFFFFF;
+    color: #EC4E20;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+.requestPassport #buttonCreateReqPassport{
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 200px;
+    opacity: 0.9;
+}
+
+.requestPassport #buttonCreateReqPassport:hover{
+    background-color: #FFFFFF;
+    color: #EC4E20;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.requestAppointment #buttonCreateReqAppointment{
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 200px;
+    opacity: 0.9;
+}
+
+.requestAppointment #buttonCreateReqAppointment:hover{
+    background-color: #FFFFFF;
+    color: #EC4E20;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+select {
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #fff;
+    border: 2px solid #0072c6;
+    content: "";
+    color: #000000;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+select:hover,
+select:focus {
+    border-color: #EC4E20;
+    outline: none;
+}
+
+option {
+    font-weight: normal;
+    padding: 6px 12px;
+    font-size: 14px;
+}
+
+.requestVisa{
+    display: none;
+    padding: 25px;
+}
+.requestPassport{
+    display: none;
+    padding: 25px;
+}
+.requestAppointment{
+    display: none;
+    padding: 25px;
+}
+
+.myDocuments{
+    display: none;
+}
+
+.blocksData{
+    text-align: center;
+    display: flex;
+    justify-content: center; /* для центрирования блоков */
+}
+
+.doc-item {
+    position: absolute;
+    margin-top: 5%;
+    margin-left: 13%;
+    margin-right: 50%;
+    width: 300px;
+    height: 100px;
+
+    padding: 10px 10px 5px 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    border: 1px solid ghostwhite;
+    background: ghostwhite;
+    border-radius: 10px;
+    font-family: "Open Sans", serif;
+    font-size: 20px;
+    overflow: hidden;
+    transition: .4s linear;
+}
+
+.doc-id {
+    margin-top: 15px;
+    text-align: left;
+}
+
+.doc-id h3 {
+    font-weight: 700;
+    color: #39404B;
+    margin: 0;
+    text-transform: revert;
+    font-size: 20px;
+    line-height: 2;
+}
+
+.passportData {
+    color: black;
+    display: block;
+    margin-bottom: 12px;
+}
+
+
+.doc-item-3{
+    margin-top: 15%;
+}
+.doc-reg h3{
+    margin-top: 15%;
+    font-size: 22px;
+    text-align: left;
+}
+.registration{
+    color: black;
+    display: block;
+    margin-bottom: 12px;
+}
+.doc-reg h4{
+    color: grey;
+    margin: 0;
+    text-transform: revert;
+    font-size: 17px;
+    line-height: 2;
+    text-align: left;
+}
+
+.doc-item-3 {
+    position: absolute;
+    margin-left: 50%;
+    margin-top: 5%;
+
+    width: 300px;
+    padding: 10px 10px 5px 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    border: 1px solid ghostwhite;
+    background: ghostwhite;
+    border-radius: 10px;
+    font-family: "Open Sans", serif;
+    font-size: 20px;
+    overflow: hidden;
+    transition: .4s linear;
+}
+
+.doc-passport {
+    margin-top: 15px;
+    text-align: left;
+}
+
+.doc-visa{
+    margin-top: 15px;
+    text-align: left;
+}
+
+.doc-passport h3 {
+    color: #39404B;
+    margin: 0;
+    text-transform: revert;
+    font-size: 20px;
+    line-height: 2;
+}
+
+.doc-visa h3{
+    color: #39404B;
+    margin: 0;
+    text-transform: revert;
+    font-size: 20px;
+    line-height: 2;
+}
+
+.doc-passport h4{
+    color: grey;
+    margin: 0;
+    text-transform: revert;
+    font-size: 17px;
+    line-height: 2;
+}
+
+.doc-visa h4{
+    color: grey;
+    margin: 0;
+    text-transform: revert;
+    font-size: 17px;
+    line-height: 2;
+}
+
+.intPassportData {
+    color: black;
+    display: block;
+    margin-bottom: 12px;
+}
+.organization {
+    color: black;
+    display: block;
+    margin-bottom: 12px;
+}
+.dateStart {
+    color: black;
+    display: block;
+    margin-bottom: 12px;
+}
+.dateEnd {
+    color: black;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.doc-item-4 {
+    position: absolute;
+    margin-top: 23%;
+    margin-right: 37%;
+    width: 300px;
+    padding: 10px 10px 5px 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    border: 1px solid ghostwhite;
+    background: ghostwhite;
+    border-radius: 10px;
+    font-family: "Open Sans", serif;
+    font-size: 20px;
+    overflow: hidden;
+    transition: .4s linear;
+}
+
+.doc-item-2{
+    position: absolute;
+    margin-top: 65%;
+    margin-right: 49%;
+
+}
+
+.textBlocks{
+    text-align: center;
+    display: flex;
+    justify-content: center; /* для центрирования блоков */
+}
+
+
 
 
 
