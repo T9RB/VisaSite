@@ -1,6 +1,4 @@
 const myDocuments = document.querySelector('#myDocuments');
-const addressBlock = document.querySelector('#textBlocksID');
-
 
 myDocuments.addEventListener('click', () => {
     let blocks = document.getElementById('myDocumentsID');
@@ -81,8 +79,8 @@ function GetIntPassport(clientID, dataIntPassport, organization, dateStart, date
                 dateEnd.innerHTML = data.dateEnd;
             }
             else {
-                let intPassport = document.getElementById('doc-3-id');
-                intPassport.style.display = 'none';
+                /*let intPassport = document.getElementById('doc-3-id');
+                intPassport.style.display = 'none';*/
             }
         }
     }
@@ -105,9 +103,9 @@ function GetVisa(clientID, numberVisa, orgVisa, dateStartVisa, dateEndVisa) {
             orgVisa.innerHTML = data.placeOfIssue;
         }
         else {
-            let visa = document.getElementById('block-visa-id');
+            /*let visa = document.getElementById('block-visa-id');
             visa.style.display = 'none';
-            addressBlock.style.marginTop = '0';
+            addressBlock.style.marginTop = '0';*/
         }
     }
     request.send();

@@ -228,18 +228,23 @@ option {
 }
 
 .blocksData{
-    text-align: center;
     display: flex;
-    justify-content: center; /* для центрирования блоков */
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-shrink: 1;
 }
 
-.doc-item {
-    position: absolute;
+.doc-item, .doc-item-3 {
+    /*position: absolute;
     margin-top: 5%;
     margin-left: 13%;
-    margin-right: 50%;
-    width: 300px;
-    height: 100px;
+    margin-right: 50%;*/
+    align-self: flex-start;
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    text-align: center;
 
     padding: 10px 10px 5px 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
@@ -264,18 +269,16 @@ option {
     text-transform: revert;
     font-size: 20px;
     line-height: 2;
+    text-align: left;
 }
 
 .passportData {
     color: black;
     display: block;
     margin-bottom: 12px;
+    text-align: left;
 }
 
-
-.doc-item-3{
-    margin-top: 15%;
-}
 .doc-reg h3{
     margin-top: 15%;
     font-size: 22px;
@@ -285,6 +288,7 @@ option {
     color: black;
     display: block;
     margin-bottom: 12px;
+    text-align: left;
 }
 .doc-reg h4{
     color: grey;
@@ -295,12 +299,12 @@ option {
     text-align: left;
 }
 
-.doc-item-3 {
-    position: absolute;
+/*.doc-item-3 {
+    !*position: absolute;
     margin-left: 50%;
-    margin-top: 5%;
+    margin-top: 5%;*!
 
-    width: 300px;
+    !*width: 300px;*!
     padding: 10px 10px 5px 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
     border: 1px solid ghostwhite;
@@ -310,15 +314,17 @@ option {
     font-size: 20px;
     overflow: hidden;
     transition: .4s linear;
-}
+}*/
 
 .doc-passport {
-    margin-top: 15px;
+    /*margin-top: 15px;
+    text-align: left;*/
     text-align: left;
 }
 
 .doc-visa{
-    margin-top: 15px;
+    /*margin-top: 15px;
+    text-align: left;*/
     text-align: left;
 }
 
@@ -356,8 +362,8 @@ option {
 
 .intPassportData {
     color: black;
-    display: block;
-    margin-bottom: 12px;
+    /*display: block;
+    margin-bottom: 12px;*/
 }
 .organization {
     color: black;
@@ -376,10 +382,14 @@ option {
 }
 
 .doc-item-4 {
-    position: absolute;
+    /*position: absolute;
     margin-top: 23%;
-    margin-right: 37%;
-    width: 300px;
+    margin-right: 37%;*/
+    /*width: 300px;*/
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+
     padding: 10px 10px 5px 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
     border: 1px solid ghostwhite;
@@ -392,19 +402,75 @@ option {
 }
 
 .doc-item-2{
-    position: absolute;
+    /*position: absolute;
     margin-top: 65%;
-    margin-right: 49%;
+    margin-right: 49%;*/
+
+    width: 200px;
+    height: 100px;
+    margin-top: 50px;
 
 }
 
 .textBlocks{
-    text-align: center;
-    display: flex;
-    justify-content: center; /* для центрирования блоков */
+    justify-content: left;
+    align-items: flex-start;
 }
 
+.myAppointment{
+    display: none;
+}
 
+.reqAppointment, .reqIntPassport, .reqVisa {
 
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
 
+li {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
 
+.date {
+    font-weight: bold;
+    color: #007bff;
+}
+
+.employee {
+    margin-top: 5px;
+    font-style: italic;
+}
+
+.description {
+    margin-top: 5px;
+}
+
+.hidden {
+    display: none;
+}
+.putButton{
+    display: inline-block;
+    padding: 8px;
+    color: #007bff;
+    background-color: #ffffff;
+    border: 1px solid #fff;
+    border-radius: 30px;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    outline: none;
+}
+
+.putButton:hover,
+.putButton:active{
+    background-color: #6C8AD5;
+    color: #FFFFFF;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
